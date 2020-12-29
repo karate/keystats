@@ -34,6 +34,8 @@ def main():
 			except json.JSONDecodeError:
 				print("File found but no valid JSON could be parsed.")
 				exit(0)
+	total_keypress = sum(STATS.values())
+	print(f"{total_keypress:,}", "keypresses read.")
 	
 	kill_handlers()
 
